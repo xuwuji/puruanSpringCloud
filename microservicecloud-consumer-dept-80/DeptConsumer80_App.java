@@ -13,6 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @EnableEurekaClient
 @ComponentScan(basePackages = {"com.puruan.*"})
+@RibbonClient(name = "ribbon-consumer", configuration = MySelfRule.class)
 public class DeptConsumer80_App {
     public static void main(String[] args) {
         SpringApplication.run(DeptConsumer80_App.class, args);
